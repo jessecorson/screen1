@@ -24,6 +24,62 @@ if ($_GET['mute']) {
 <head>
 <style>
 
+.greenButton {
+        -webkit-border-radius: 60;
+        -moz-border-radius: 60;
+        border-radius: 60px;
+        text-shadow: 1px 1px 4px #666666;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 40px;
+        padding: 20px 40px 20px 40px;
+        border: solid #1f628d 6px;
+	background-color:#44c767;
+	border:6px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.greenButton:hover {
+	background-color:#5cbf2a;
+}
+.greenButton:active {
+	position:relative;
+	top:1px;
+}
+
+.redButton {
+        border-radius: 60px;
+        text-shadow: 1px 1px 4px #666666;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 40px;
+        padding: 20px 40px 20px 40px;
+        border: solid #963f3f 6px;
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.redButton:hover {
+	background-color:#eb675e;
+}
+.redButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
 .btn {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -52,11 +108,17 @@ if ($_GET['mute']) {
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+.btn:active {
+        position:relative;
+        top:1px;
+}
 
 </style>
 </head>
 <body>
 <center>
+
+<a href="/screen1"><img width="200" src="images/remoteicon.jpg"></img></a>
 <h1>Screen 1</h1>
 
 <style type="text/css">
@@ -64,10 +126,10 @@ if ($_GET['mute']) {
 .tg td{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;text-align:center;padding:40px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
 .tg .tg-yw4l{vertical-align:center}
 </style>
-<table  width="100%" class="tg">
+<table  width="500" class="tg">
   <tr>
     <td class="tg-yw4l">
-<div class="btn:hover"><a href="?start=true" class="btn">Start</a></div>
+<a href="?start=true" class="greenButton">Start</a>
 </td>
     <td class="tg-yw4l">
 <div class="btn:hover"><a href="?vup=true" class="btn">Vol Up</a></div>
@@ -75,7 +137,7 @@ if ($_GET['mute']) {
   </tr>
   <tr>
     <td class="tg-yw4l">
-<div class="btn:hover"><a href="?stop=true" class="btn">Stop</a></div>
+<div class="btn:hover"><a href="?stop=true" class="redButton">Stop</a></div>
 </td>
     <td class="tg-yw4l">
 <div class="btn:hover"><a href="?vdown=true" class="btn">Vol Down</a></div>
@@ -84,7 +146,7 @@ if ($_GET['mute']) {
   <tr>
     <td class="tg-yw4l"></td>
     <td class="tg-yw4l">
-<div class="btn:hover"><a href="?mute=true" class="btn">Mute</a></div>
+<a href="?mute=true" class="btn">Mute</a>
 </td>
   </tr>
   <tr>
